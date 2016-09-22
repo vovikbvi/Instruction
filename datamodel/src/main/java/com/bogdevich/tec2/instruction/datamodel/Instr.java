@@ -28,4 +28,53 @@ private Date dateReview;
 @Column
 private Integer validity;
 
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public UserProfile getOvner() {
+	return ovner;
+}
+
+public void setOvner(UserProfile ovner) {
+	this.ovner = ovner;
+}
+
+public Instrtype getInstrtype() {
+	return instrtype;
+}
+
+public void setInstrtype(Instrtype instrtype) {
+	this.instrtype = instrtype;
+}
+
+public Shop getLocation() {
+	return location;
+}
+
+public void setLocation(Shop location) {
+	this.location = location;
+}
+
+public Date getDateReview() {
+	return dateReview;
+}
+
+public void setDateReview(Date dateReview) {
+	this.dateReview = dateReview;
+}
+
+public Integer getValidity() {
+	return validity;
+}
+
+public void setValidity(Integer validity) {
+	this.validity = validity;
+}
+
+
 }

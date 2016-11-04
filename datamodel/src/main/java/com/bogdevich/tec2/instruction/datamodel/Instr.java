@@ -16,8 +16,8 @@ private String name;
 @ManyToOne(targetEntity = UserProfile.class, fetch = FetchType.LAZY)
 private UserProfile ovner;
 
-@ManyToOne(targetEntity = Instrtype.class, fetch = FetchType.LAZY)
-private Instrtype instrtype;
+@ManyToOne(targetEntity = InstrType.class, fetch = FetchType.LAZY)
+private InstrType instrtype;
 
 @ManyToOne(targetEntity = Shop.class, fetch = FetchType.LAZY)
 private Shop location;
@@ -44,11 +44,11 @@ public void setOvner(UserProfile ovner) {
 	this.ovner = ovner;
 }
 
-public Instrtype getInstrtype() {
+public InstrType getInstrtype() {
 	return instrtype;
 }
 
-public void setInstrtype(Instrtype instrtype) {
+public void setInstrtype(InstrType instrtype) {
 	this.instrtype = instrtype;
 }
 

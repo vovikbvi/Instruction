@@ -3,7 +3,7 @@ package com.bogdevich.tec2.instruction.dataacess.filter;
 import java.io.Serializable;
 import javax.persistence.metamodel.SingularAttribute;
 
-public class AbstractFilter implements Serializable{
+public abstract class AbstractFilter implements Serializable{
 
 	
 	private SingularAttribute sortProperty;

@@ -11,7 +11,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<spring.version>4.0.3.RELEASE</spring.version>
+		<spring.version>3.1.1.RELEASE</spring.version>
 		<wicket.version>7.1.0</wicket.version>
 		<jetty9.version>9.2.13.v20150730</jetty9.version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
@@ -20,8 +20,8 @@
 	</properties>
 
 	<modules>
-		<module>dataaccess</module>
 		<module>datamodel</module>
+		<module>dataaccess</module>
 		<module>services</module>
 		<module>webapp</module>
 	</modules>
@@ -178,79 +178,6 @@
 				<version>2.1</version>
 			</dependency>
 
-			<!-- WICKET DEPENDENCIES -->
-			<dependency>
-				<groupId>org.apache.wicket</groupId>
-				<artifactId>wicket-auth-roles</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.wicket</groupId>
-				<artifactId>wicket-core</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.wicket</groupId>
-				<artifactId>wicket-extensions</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.wicket</groupId>
-				<artifactId>wicket-spring</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.wicket</groupId>
-				<artifactId>wicket-datetime</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.googlecode.wicket-jquery-ui</groupId>
-				<artifactId>wicket-jquery-ui</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.googlecode.wicket-jquery-ui</groupId>
-				<artifactId>wicket-jquery-ui-theme-uilightness</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.googlecode.wicket-jquery-ui</groupId>
-				<artifactId>wicket-kendo-ui-theme-default</artifactId>
-				<version>${wicket.version}</version>
-			</dependency>
-
-
-
-			<!-- JETTY DEPENDENCIES FOR TESTING -->
-			<dependency>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-server</artifactId>
-				<version>${jetty9.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-webapp</artifactId>
-				<version>${jetty9.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-util</artifactId>
-				<version>${jetty9.version}</version>
-				<scope>test</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-jmx</artifactId>
-				<version>${jetty9.version}</version>
-				<scope>test</scope>
-			</dependency>
 
 
 			<dependency>
@@ -296,12 +223,6 @@
 		</dependency>	
 		
 
-		<!-- @Inject -->
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
 				
 		<!-- Servlet -->
 		<dependency>

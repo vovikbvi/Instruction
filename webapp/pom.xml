@@ -22,54 +22,62 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-extensions</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-spring</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-auth-roles</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket-datetime</artifactId>
-		</dependency>
 
 
-
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-server</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-webapp</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-util</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-jmx</artifactId>
-		</dependency>
-
-
+	
+<!-- 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 		</dependency>
+ -->
 
+<!-- new depend.. -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				 </exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+				
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+		</dependency>	
+		
+
+		<!-- @Inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
+				
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
 
 
 	</dependencies>

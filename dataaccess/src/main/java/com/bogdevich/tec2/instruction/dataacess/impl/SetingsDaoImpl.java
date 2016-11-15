@@ -4,7 +4,6 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Repository;
 
 import com.bogdevich.tec2.instruction.dataacess.SetingsDao;

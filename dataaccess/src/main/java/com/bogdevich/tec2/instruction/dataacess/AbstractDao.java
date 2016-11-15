@@ -2,10 +2,6 @@ package com.bogdevich.tec2.instruction.dataacess;
 
 import java.util.List;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
-
 
 
 public interface AbstractDao<T, ID, F> {

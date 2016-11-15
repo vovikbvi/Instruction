@@ -10,7 +10,7 @@
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect" />
 			<property name="hibernate.ejb.naming_strategy"
-				value="by.bogdevich.training.airline.datamodel.util.CustomImprovedNamingStrategy" />			       
+				value="com.bogdevich.tec2.instruction.datamodel.util.CustomImprovedNamingStrategy" />			       
 			<property name="hibernate.show_sql" value="false" />
 			<property name="hibernate.format_sql" value="false" />
 		</properties>

@@ -1,6 +1,5 @@
 package com.bogdevich.tec2.instruction.service;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,13 +8,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:service-context-test.xml" })
-public class CompanyServiceTest extends AbstractTest{
-
-
+public class InstrTypeServiceTest extends AbstractTest{
+	
 	@Test
-	public void testCompanyInsert() {
-		Assert.assertNotNull(addCompany());
-
+	public void testInstrTypeInsert(){
+		Assert.assertNotNull(addInstrType());
 	}
 
 }

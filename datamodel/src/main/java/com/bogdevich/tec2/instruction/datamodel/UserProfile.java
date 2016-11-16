@@ -28,7 +28,7 @@ public class UserProfile extends AbstractModel{
 	private String email;
 	
 	@ManyToOne(targetEntity = Shop.class, fetch = FetchType.LAZY)
-	private Shop shop_id;
+	private Shop shop;
 	
 	@Column
 	@Enumerated(value = EnumType.ORDINAL)
@@ -75,11 +75,11 @@ public class UserProfile extends AbstractModel{
 	}
 
 	public Shop getShop_id() {
-		return shop_id;
+		return shop;
 	}
 
-	public void setShop_id(Shop shop_id) {
-		this.shop_id = shop_id;
+	public void setShop(Shop shop) {
+		this.shop = shop;
 	}
 
 	public UserRole getRole() {

@@ -1,6 +1,7 @@
 package com.bogdevich.tec2.instruction.datamodel;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,7 +18,7 @@ private String name;
 private UserProfile ovner;
 
 @ManyToOne(targetEntity = InstrType.class, fetch = FetchType.LAZY)
-private InstrType instrtype;
+private InstrType instrType;
 
 @ManyToOne(targetEntity = Shop.class, fetch = FetchType.LAZY)
 private Shop location;
@@ -44,12 +45,12 @@ public void setOvner(UserProfile ovner) {
 	this.ovner = ovner;
 }
 
-public InstrType getInstrtype() {
-	return instrtype;
+public InstrType getInstrType() {
+	return instrType;
 }
 
-public void setInstrtype(InstrType instrtype) {
-	this.instrtype = instrtype;
+public void setInstrType(InstrType instrType) {
+	this.instrType = instrType;
 }
 
 public Shop getLocation() {
@@ -75,6 +76,7 @@ public Integer getValidity() {
 public void setValidity(Integer validity) {
 	this.validity = validity;
 }
+
 
 
 }

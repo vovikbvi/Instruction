@@ -41,4 +41,5 @@ public class CompanyServiceImpl implements CompanyService{
 	public List<Company> getAll(){
 		return companyDao.getAll();
 	}
+	
 }

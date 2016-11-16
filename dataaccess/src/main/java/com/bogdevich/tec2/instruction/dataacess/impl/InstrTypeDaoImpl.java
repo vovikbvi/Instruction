@@ -13,7 +13,7 @@ import com.bogdevich.tec2.instruction.datamodel.InstrType;
 @Repository
 public class InstrTypeDaoImpl extends AbstractDaoImpl<InstrType, Long, InstrTypeFilter> implements InstrTypeDao{
 
-	protected InstrTypeDaoImpl(Class<InstrType> entityClass) {
+	protected InstrTypeDaoImpl() {
 		super(InstrType.class);
 	}
 

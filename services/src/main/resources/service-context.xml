@@ -17,8 +17,8 @@
 	<context:annotation-config />
 
 	<context:component-scan base-package="com.bogdevich.tec2.instruction.service.impl" />
-	<context:component-scan base-package="com.bogdevich.tec2.instruction.dataaccess.impl" />
-
+	<context:component-scan base-package="com.bogdevich.tec2.instruction.dataacess.impl" />
+								
 
 	<bean id="dataSource"
 		class="com.bogdevich.tec2.instruction.datamodel.util.SchemaNameAwareBasicDataSource"

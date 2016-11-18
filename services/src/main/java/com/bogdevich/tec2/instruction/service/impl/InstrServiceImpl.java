@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.bogdevich.tec2.instruction.dataacess.InstrDao;
+import com.bogdevich.tec2.instruction.dataacess.filter.InstrFilter;
 import com.bogdevich.tec2.instruction.datamodel.Instr;
 import com.bogdevich.tec2.instruction.service.InstrService;
 
@@ -42,4 +43,8 @@ public class InstrServiceImpl implements InstrService {
 		return instrDao.getAll();
 	}
 	
+	@Override
+	public List<Instr> getRecordSorted(InstrFilter filter){
+		return instrDao.getRecordSorted(filter);
+	}
 }

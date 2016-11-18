@@ -9,21 +9,25 @@
 </head>
 <body>
 	<h2>List of instructions</h2>
-	<table>
+	<table border="1">
 		<tr>
-			<td>ID</td>
-			<td>name</td>
-			<td>type</td>
-			<td>owner</td>
-			<td>location</td>
+			<th>ID</td>
+			<th>name</td>
+			<th>type</td>
+			<th>owner</td>
+			<th>location</td>
+			<th>validity</td>
+			<th>action</td>
 		</tr>
 		<c:forEach items="${instructions}" var="instructions">
 			<tr>
 				<td>${instructions.id}</td>
 				<td>${instructions.name}</td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>${instructions.instrType.name}</td>
+				<td>${instructions.ovner.lastName}</td>
+				<td>${instructions.location.name}</td>
+				<td>${instructions.validity}</td>
+				<td><a href="<c:url value='/edit-instr-${instructions.id}' />">${instructions.id}</a></td>
 			</tr>
 		</c:forEach>
 	</table>

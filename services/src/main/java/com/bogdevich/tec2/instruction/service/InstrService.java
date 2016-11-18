@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bogdevich.tec2.instruction.dataacess.filter.InstrFilter;
 import com.bogdevich.tec2.instruction.datamodel.Instr;
 
 public interface InstrService {
@@ -20,6 +21,8 @@ public interface InstrService {
 	Instr get(Long id);
 	
 	List<Instr> getAll();
+
+	List<Instr> getRecordSorted(InstrFilter filter);
 	
 	
 	

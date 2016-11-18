@@ -39,6 +39,6 @@ public class HomeController {
 		List<Instr> instructions = instrService.getAll();
 		model.addAttribute("instructions", instructions);
 		
-		return "allInstruction";
+		return "list_instr";
 	}
 }

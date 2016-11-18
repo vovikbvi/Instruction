@@ -17,13 +17,13 @@
 			<td>owner</td>
 			<td>location</td>
 		</tr>
-		<c:forEach items="${employees}" var="employee">
+		<c:forEach items="${instructions}" var="instructions">
 			<tr>
-				<td>${employee.name}</td>
-				<td>${employee.joiningDate}</td>
-				<td>${employee.salary}</td>
-				<td><a href="<c:url value='/edit-${employee.ssn}-employee' />">${employee.ssn}</a></td>
-				<td><a href="<c:url value='/delete-${employee.ssn}-employee' />">delete</a></td>
+				<td>${instructions.id}</td>
+				<td>${instructions.name}</td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</c:forEach>
 	</table>

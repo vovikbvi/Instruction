@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.bogdevich.tec2.instruction.dataacess.ShopDao;
+import com.bogdevich.tec2.instruction.dataacess.filter.ShopFilter;
 import com.bogdevich.tec2.instruction.datamodel.Shop;
 import com.bogdevich.tec2.instruction.service.ShopService;
 
@@ -42,5 +43,11 @@ public class ShopServiceImpl implements ShopService{
 		return shopDao.getAll();
 	}
 
+	@Override
+	public List<Shop> getRecordSorted(ShopFilter filter){
+		return shopDao.getRecordSorted(filter);
+	
+		
+	}
 
 }

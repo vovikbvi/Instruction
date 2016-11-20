@@ -11,13 +11,13 @@
 	<h2>List of instructions</h2>
 	<table border="1">
 		<tr>
-			<th>ID</td>
-			<th>name</td>
-			<th>type</td>
-			<th>owner</td>
-			<th>location</td>
-			<th>validity</td>
-			<th>action</td>
+			<th>ID</th>
+			<th>name</th>
+			<th>type</th>
+			<th>owner</th>
+			<th>location</th>
+			<th>validity</th>
+			<th>action</th>
 		</tr>
 		<c:forEach items="${instructions}" var="instructions">
 			<tr>

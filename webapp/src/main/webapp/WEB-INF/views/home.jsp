@@ -21,5 +21,9 @@
 </login-form:form>
 
 <a href="<c:url value='/view-instr' />">Show all instruction</a>
+<br>
+<a href="<c:url value='/view-company' />">Show all company</a>
+<br>
+<a href="<c:url value='/view-shop' />">Show all shop</a>
 </body>
 </html>

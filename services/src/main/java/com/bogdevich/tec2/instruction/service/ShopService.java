@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bogdevich.tec2.instruction.dataacess.filter.ShopFilter;
 import com.bogdevich.tec2.instruction.datamodel.Shop;
 
 public interface ShopService {
@@ -20,5 +21,7 @@ public interface ShopService {
 	Shop get(Long id);
 
 	List<Shop> getAll();
+
+	List<Shop> getRecordSorted(ShopFilter filter);
 
 }

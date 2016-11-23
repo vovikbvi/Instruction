@@ -9,4 +9,6 @@ public interface ShopDao extends AbstractDao<Shop, Long, ShopFilter>{
 
 	List<Shop> getRecordSorted(ShopFilter filter);
 
+	Shop getWithFeth(Long id);
+
 }

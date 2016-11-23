@@ -23,6 +23,8 @@ public interface InstrService {
 	List<Instr> getAll();
 
 	List<Instr> getRecordSorted(InstrFilter filter);
+
+	Instr getWithFetch(Long id);
 	
 	
 	

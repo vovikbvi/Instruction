@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.bogdevich.tec2.instruction.dataacess.filter.UserProfileFilter;
 import com.bogdevich.tec2.instruction.datamodel.UserProfile;
 
 public interface UserProfileService {
@@ -20,5 +21,9 @@ public interface UserProfileService {
 	UserProfile get(Long id);
 
 	List<UserProfile> getAll();
+
+	List<UserProfile> getRecordSorted(UserProfileFilter filter);
+
+	UserProfile getWithFetch(Long id);
 
 }

@@ -46,8 +46,11 @@ public class ShopServiceImpl implements ShopService{
 	@Override
 	public List<Shop> getRecordSorted(ShopFilter filter){
 		return shopDao.getRecordSorted(filter);
-	
-		
 	}
 
+	@Override 
+	public Shop getWithFetch (Long id){
+		return shopDao.getWithFeth(id);
+	}
+	
 }

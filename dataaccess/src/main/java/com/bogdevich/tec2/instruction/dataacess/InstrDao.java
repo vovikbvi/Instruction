@@ -9,4 +9,6 @@ public interface InstrDao extends AbstractDao<Instr, Long, InstrFilter>{
 
 	List<Instr> getRecordSorted(InstrFilter filter);
 
+	Instr getWithFetch(Long id);
+
 }

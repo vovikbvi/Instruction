@@ -24,4 +24,6 @@ public interface ShopService {
 
 	List<Shop> getRecordSorted(ShopFilter filter);
 
+	Shop getWithFetch(Long id);
+
 }

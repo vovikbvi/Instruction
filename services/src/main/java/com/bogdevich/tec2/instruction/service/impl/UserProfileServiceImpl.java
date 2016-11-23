@@ -7,6 +7,9 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.bogdevich.tec2.instruction.dataacess.UserProfileDao;
+import com.bogdevich.tec2.instruction.dataacess.filter.ShopFilter;
+import com.bogdevich.tec2.instruction.dataacess.filter.UserProfileFilter;
+import com.bogdevich.tec2.instruction.datamodel.Shop;
 import com.bogdevich.tec2.instruction.datamodel.UserProfile;
 import com.bogdevich.tec2.instruction.service.UserProfileService;
 
@@ -40,6 +43,16 @@ public class UserProfileServiceImpl implements UserProfileService{
 	@Override 
 	public List<UserProfile> getAll(){
 		return userProfileDao.getAll();
+	}
+
+	@Override
+	public List<UserProfile> getRecordSorted(UserProfileFilter filter){
+		return userProfileDao.getRecordSorted(filter);
+	}
+
+	@Override 
+	public UserProfile getWithFetch (Long id){
+		return userProfileDao.getWithFeth(id);
 	}
 
 }

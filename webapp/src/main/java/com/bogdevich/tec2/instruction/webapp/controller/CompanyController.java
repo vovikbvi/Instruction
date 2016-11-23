@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,9 +23,13 @@ public class CompanyController {
 	@RequestMapping(value = "/view-company", method = RequestMethod.GET)
 	public String viewCompany(Model model){
 		
+		addAllCompanyInModel(model);
+		return "company/list-company";
+	}
+
+	private void addAllCompanyInModel(Model model) {
 		List<Company> companies= companyService.getAll();
 		model.addAttribute("companies", companies);
-		return "company/list-company";
 	}
 	
 	@RequestMapping(value = "/edit-company-{id}", method  = RequestMethod.GET)
@@ -37,13 +42,12 @@ public class CompanyController {
 	}
 
 	@RequestMapping(value = "/edit-company-{id}", method  = RequestMethod.POST)
-	public String updateCompany(Model model, Company company){
+	public String updateCompany(@ModelAttribute Company company, Model model){
 		
 		companyService.update(company);
 		
 		
-		List<Company> companies= companyService.getAll();
-		model.addAttribute("companies", companies);
+		addAllCompanyInModel(model);
 		
 		return "company/list-company";
 	}

@@ -47,4 +47,9 @@ public class InstrServiceImpl implements InstrService {
 	public List<Instr> getRecordSorted(InstrFilter filter){
 		return instrDao.getRecordSorted(filter);
 	}
+	
+	@Override
+	public Instr getWithFetch(Long id){
+		return instrDao.getWithFetch(id);
+	}
 }

@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -44,7 +45,7 @@ public class ShopController {
 	@RequestMapping(value = "/edit-shop-{id}", method = RequestMethod.GET)
 	public String editShop(Model model, @PathVariable Long id){
 		
-		Shop shop = shopService.get(id);
+		Shop shop = shopService.getWithFetch(id);
 		model.addAttribute("shop", shop);
 		
 		List<Company> companies = companyService.getAll();
@@ -54,7 +55,7 @@ public class ShopController {
 	}
 
 	@RequestMapping(value = "/edit-shop-{id}", method = RequestMethod.POST)
-	public String updateShop(Model model, Shop shop){
+	public String updateShop(@ModelAttribute Shop shop, Model model){
 		
 		shopService.update(shop);
 		

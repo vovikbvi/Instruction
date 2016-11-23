@@ -8,7 +8,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.JoinType;
 import javax.persistence.criteria.Root;
 
-import org.hibernate.action.internal.EntityIdentityInsertAction;
 import org.springframework.stereotype.Repository;
 
 import com.bogdevich.tec2.instruction.dataacess.InstrDao;
@@ -50,4 +49,22 @@ public class InstrDaoImpl extends AbstractDaoImpl<Instr, Long, InstrFilter> impl
 		return em.createQuery(cq).getResultList();
 	}
 
+	@Override
+	public Instr getWithFetch(Long id){
+		EntityManager em = getEntityManager();
+		CriteriaBuilder cb = em.getCriteriaBuilder();
+		CriteriaQuery<Instr> cq = cb.createQuery(Instr.class);
+		Root<Instr> from = cq.from(Instr.class);
+
+		cq.select(from);
+		
+			from.fetch(Instr_.ovner, JoinType.LEFT);
+			from.fetch(Instr_.instrType, JoinType.LEFT);
+			from.fetch(Instr_.location, JoinType.LEFT);
+
+			
+		return em.createQuery(cq).getSingleResult();
+
+	}
+	
 }

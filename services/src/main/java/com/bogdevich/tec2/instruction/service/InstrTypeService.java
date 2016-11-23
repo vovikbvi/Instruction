@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.bogdevich.tec2.instruction.datamodel.Instr;
 import com.bogdevich.tec2.instruction.datamodel.InstrType;
 
 public interface InstrTypeService {

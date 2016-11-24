@@ -5,28 +5,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <link href="<c:url value="/resources/css/tables.css" />" rel="stylesheet">
-<title>view shop</title>
+<title>view instructions</title>
 </head>
 <body>
-	<h1>List of shop</h1>
+	<h2>List of instructions</h2>
 	<table class="table-list-record">
 		<tr>
 			<th>ID</th>
 			<th>name</th>
-			<th>company</th>
+			<th>type</th>
+			<th>owner</th>
+			<th>location</th>
+			<th>validity</th>
 			<th>action</th>
 		</tr>
-		<c:forEach items="${shops}" var="shops">
+		<c:forEach items="${instructions}" var="instructions">
 			<tr>
-               <td>${shops.id}</td>
-               <td>${shops.name}</td>
-                <td>${shops.company.name}</td> 
-               <td><a href="<c:url value='/edit-shop-${shops.id}'/>">edit</a></td>
+				<td>${instructions.id}</td>
+				<td>${instructions.name}</td>
+				<td>${instructions.instrType.name}</td>
+				<td>${instructions.ovner.lastName}</td>
+				<td>${instructions.location.name}</td>
+				<td>${instructions.validity}</td>
+				<td><a href="<c:url value='/edit-instr-${instructions.id}' />">edit</a></td>
 			</tr>
 		</c:forEach>
 	</table>
+
 
 </body>
 </html>

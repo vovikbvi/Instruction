@@ -14,6 +14,7 @@ import com.bogdevich.tec2.instruction.dataacess.InstrDao;
 import com.bogdevich.tec2.instruction.dataacess.filter.InstrFilter;
 import com.bogdevich.tec2.instruction.datamodel.Instr;
 import com.bogdevich.tec2.instruction.datamodel.Instr_;
+import com.bogdevich.tec2.instruction.datamodel.Shop_;
 
 @Repository
 public class InstrDaoImpl extends AbstractDaoImpl<Instr, Long, InstrFilter> implements InstrDao {
@@ -62,6 +63,7 @@ public class InstrDaoImpl extends AbstractDaoImpl<Instr, Long, InstrFilter> impl
 			from.fetch(Instr_.instrType, JoinType.LEFT);
 			from.fetch(Instr_.location, JoinType.LEFT);
 
+			cq.where(cb.equal(from.get(Instr_.id), id));
 			
 		return em.createQuery(cq).getSingleResult();
 

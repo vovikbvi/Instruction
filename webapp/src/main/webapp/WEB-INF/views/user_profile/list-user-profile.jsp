@@ -6,29 +6,35 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>view instructions</title>
+
+<link href="<c:url value="/resources/css/tables.css" />" rel="stylesheet">
+<title><spring:message code="userprofile.list-user-profile" /></title>
 </head>
 <body>
-	<h2>List of instructions</h2>
-	<table border="1">
+	<h2><spring:message code="userprofile.list-user-profile" /></h2>
+	<table class="table-list-record">
 		<tr>
-			<th>ID</th>
-			<th>name</th>
-			<th>type</th>
-			<th>owner</th>
-			<th>location</th>
-			<th>validity</th>
-			<th>action</th>
+			<th><spring:message code="id" /></th>
+			<th><spring:message code="userprofile.login" /></th>
+			<th><spring:message code="userprofile.password" /></th>
+			<th><spring:message code="userprofile.first-name" /></th>
+			<th><spring:message code="userprofile.last-name" /></th>
+			<th><spring:message code="userprofile.email" /></th>
+			<th><spring:message code="userprofile.shop" /></th>
+			<th><spring:message code="userprofile.role" /></th>
+			<th><spring:message code="action" /></th>
 		</tr>
-		<c:forEach items="${instructions}" var="instructions">
+		<c:forEach items="${userProfiles}" var="userProfiles">
 			<tr>
-				<td>${instructions.id}</td>
-				<td>${instructions.name}</td>
-				<td>${instructions.instrType.name}</td>
-				<td>${instructions.ovner.lastName}</td>
-				<td>${instructions.location.name}</td>
-				<td>${instructions.validity}</td>
-				<td><a href="<c:url value='/edit-instr-${instructions.id}' />">edit</a></td>
+				<td>${userProfiles.id}</td>
+				<td>${userProfiles.login}</td>
+				<td>${userProfiles.password}</td>
+				<td>${userProfiles.firstName}</td>
+				<td>${userProfiles.lastName}</td>
+				<td>${userProfiles.email}</td>
+				<td>${userProfiles.shop.name}</td>
+				<td>${userProfiles.role}</td>
+				<td><a href="<c:url value='/edit-user-profile-${userProfiles.id}' />"><spring:message code="edit" /></a></td>
 			</tr>
 		</c:forEach>
 	</table>

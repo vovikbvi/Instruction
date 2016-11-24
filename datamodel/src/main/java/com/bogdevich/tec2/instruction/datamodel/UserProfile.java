@@ -74,7 +74,7 @@ public class UserProfile extends AbstractModel{
 		this.email = email;
 	}
 
-	public Shop getShop_id() {
+	public Shop getShop() {
 		return shop;
 	}
 
@@ -89,7 +89,7 @@ public class UserProfile extends AbstractModel{
 	public void setRole(UserRole role) {
 		this.role = role;
 	}
-	
+
 	
 
 }
